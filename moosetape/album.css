@@ -1,0 +1,275 @@
+.moosetape-head{
+    margin-top: 10px;
+}
+.main-body{
+    padding: 0 10px;
+    position: relative;
+}
+.bottom{
+    position: absolute;
+    bottom: 0;
+    padding: 30px 10px;
+    max-width: 952px;
+    width: 100%;
+    border-top: 1px solid rgb(255, 255, 255, 0.1);
+    .player-container{
+        margin: 0 auto;
+    }
+}
+.play1song{
+    background-color: rgb(0, 189, 18);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    border-radius: 999px;
+    color: white;
+    padding: 15px;
+    border: none;
+    outline: none;
+    font-family: "Beiruti", sans-serif;
+
+}
+.play1song:hover{
+    box-shadow: 0 0  1000px inset rgb(3, 144, 17);
+}
+.fa-solid{
+    font-size: 20px;
+}
+.play-pause-icon{
+    background-color: white;
+    border-radius: 50%;
+    padding: 15px 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    margin-bottom: 20px;
+    i{
+        cursor: pointer;
+    }
+
+    div{
+        display: flex;
+        align-items: center;
+    }
+    .icon1{
+        gap: 100px; 
+        opacity: 0.5;
+    }
+    .icon2{
+        gap: 50px;
+    }
+    .icon3{
+        gap: 100px;
+    }
+}
+.follow{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+}
+.follow-btn{
+    background: transparent;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 999px;
+    border: 1px white solid;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    font-family: "Beiruti", sans-serif;
+}
+.follow-btn:hover{
+    background-color: #2b2d30;
+}
+.song-head{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+   
+    margin-top: 20px;
+    border-bottom: 0.1px solid;
+    
+}
+.song{
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    margin-top: 20px; 
+    align-items: center;  
+    padding: 10px; 
+    transition: 0.3s linear;
+}
+.song:hover{
+    background-color: #2b2d30;
+}
+.track-head, .track{
+    display: flex;
+    gap: 40px;
+}
+.duration-head, .duration{
+    text-align: end;
+}
+.track-name{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    img{
+        width: 50px;
+    }   
+} 
+.current-artist{
+    color: white;
+    text-align: center;
+    font-family: "Beiruti", sans-serif;
+    overflow: hidden;
+    background-color: rgb(14, 14, 14);
+
+}
+.current-artist-follow{
+    text-align: left;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.folo-unfolo{
+    background: transparent;
+    width: 94px;
+    color: white;
+    padding: 8px 25px;
+    border-radius: 999px;
+    border: 1px white solid;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    gap: 10px;
+    font-family: "Beiruti", sans-serif;
+}
+.monthly-listener{
+    margin-top: 20px;
+    text-align: left;
+    opacity: 0.5;
+}
+.currently-playing-song{
+    margin-top: 40px;
+}
+.waves img{
+    height: 50px;
+}
+#myProgressBar{
+    width: 100%;
+}
+#myProgressBar{
+    appearance: none;
+    -webkit-appearance: none;
+    background: transparent;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 16px;
+}
+#myProgressBar::-webkit-slider-runnable-track{
+    background: #5F5F56;
+    height: 10px;
+    
+}
+#myProgressBar::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border:2px solid white;
+    box-shadow: -1007px 0 0 1000px white;
+}
+
+.waves-img{
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+.selected{
+    background-color: #2b2d30;
+}
+.icon3 i{
+    opacity: 0.5;
+}
+.icon3 .icon-selected{
+    opacity: 1;
+}
+.current-artist-name{
+    font-size: 18px;
+}
+
+@media (max-width:1024px) {
+   .currently-playing-img{
+    max-width: 100px;
+   } 
+   .current-artist-name{
+    font-size: 12px;
+   }
+   .folo-unfolo{
+    padding: 3px 3px;
+    width: 86px;
+    justify-content: center;
+   }
+   .monthly-listener p{
+    font-size: 10px;
+   }
+   .icons{
+       padding: 0;
+       .icon1, .icon3{
+        gap: 25px;
+       }
+   }
+
+}
+@media (max-width:768px){
+    main .container{
+        grid-template-columns: 1fr;
+    }
+    .sidebar{
+        position: fixed;
+        transform: translateX(-150%);
+    }
+    .current-artist{
+        display: none;
+    }
+    .track-head, .track{
+        gap: 15px;
+    }
+}
+@media(max-width:576px){
+    h4.song-name{
+        font-size: 15px;
+    }
+    h5.artist-name{
+        font-size: 12px;
+    }
+    input#search{
+        max-width: 86px;
+    }
+    .play1song{
+        padding: 5px;
+    }
+    .follow-btn {
+        padding: 5px 10px;
+    }
+    .album-songs-container{
+        max-height: calc(100% - 281px);
+    }
+    .moosetape-head{
+        margin-top: 0;
+    }
+    .play-pause-icon{
+        padding: 10px 13px;
+    }
+    .icons div.icon2{
+        gap: 20px;
+    }
+}
